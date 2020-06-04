@@ -25,6 +25,8 @@ License
 
 MIT
 
+This project has no affiliation with "Sony" or "Playstation" and its similar products at all in any way.
+
 Sony, Sony Entertainment Network, Playstation,  are trademarks or registered trademarks of Sony Corporation.
 
 DUALSHOCK, PlayStation, PS2, PS3, PS4, “PSN”  are trademarks or registered trademarks of Sony Interactive Entertainment Inc.

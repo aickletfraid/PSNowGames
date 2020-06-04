@@ -9,7 +9,7 @@ import ast
 import time
 import unicodedata
 
-url = "https://www.playstation.com/en-en/explore/playstation-now/ps-now-games/"
+url = "https://www.playstation.com/en-gb/explore/playstation-now/ps-now-games/"
 
 payload = {}
 headers = {
@@ -27,14 +27,14 @@ headers = {
   'cookie': 'psnowuuid=tmPMxnXlpgThnpySm6it; s_fid=32709406EC60097D-055562D76AF8141D; _fbp=fb.1.1590410407201.907884392; sat_track=true; pdc_custage=m; said=300ef6d3-cf9e-4304-8ef3-dde09d70543b; dcm2=null%7Cnull%7Cnull%7Cnull%7Cnull%7Cnull; at_check=true; AMCVS_BD260C0F53C9733E0A490D45%40AdobeOrg=1; s_cc=true; DisableCookieAlert=YES; eu-auth=true; eucookiepreference=accept; sbPlatformPrivacyLevel=all; check=true; _evidon_consent_cookie={"consent_date":"2020-06-03T20:31:40.498Z","consent_type":1}; userinfo=c36a38b3a46326c5d923de20bf18552b2c38b29aeee2add712381395584e792c; ag_US=m; ph=denzoned; PDCUserDecrypt=%7B%22avatarUrl%22%3A%22http%3A%2F%2Fstatic-resource.np.community.playstation.net%2Favatar%2FWWS_A%2FUP90001209G03_BAEDE4B3D72B495E02D4_L.png%22%2C%22dob%22%3A%221993-07-09%22%2C%22avatar_url_large%22%3A%22%2F%2Fstatic-resource.np.community.playstation.net%2Favatar%2FWWS_A%2FUP90001209G03_BAEDE4B3D72B495E02D4_L.png%22%2C%22avatar_url_medium%22%3A%22%2F%2Fstatic-resource.np.community.playstation.net%2Favatar_m%2FWWS_A%2FUP90001209G03_F350D1CDDCBDE7930BD2_M.png%22%2C%22legalCountry%22%3A%22de%22%2C%22handle%22%3A%22denzoned%22%2C%22avatar_url_small%22%3A%22%2F%2Fstatic-resource.np.community.playstation.net%2Favatar_s%2FWWS_A%2FUP90001209G03_4E7B1FD9A94A93943B8C_S.png%22%2C%22originalId%22%3A%22denzoned%22%2C%22sub_account%22%3Afalse%2C%22region%22%3A%22SCEE%22%2C%22age%22%3A26%2C%22isPlusUser%22%3A1%7D; dcm=null%7Cnull%7Cnull%7Cnull%7Cnull%7Cnull; __lt__cid=22fecdae-6fa9-4040-805c-beb1a87e82c3; _ga=GA1.2.2128346606.1591234798; _gid=GA1.2.1841338534.1591234798; JSESSIONID=node0p3eodkv4nppcb8vrxvufvvw211036.node0; AWSELB=BD87EDB90E7E5EC1FE3D0497C5EE8FE6334A3A64CC76523C0B46185D0C336E01789A9A9E061186757BC9C4A8DC36B9261FAA2B29E66C405AAD4DF0B84D7E51FE5D04602A88; AWSELBCORS=BD87EDB90E7E5EC1FE3D0497C5EE8FE6334A3A64CC76523C0B46185D0C336E01789A9A9E061186757BC9C4A8DC36B9261FAA2B29E66C405AAD4DF0B84D7E51FE5D04602A88; AKA_A2=A; mboxEdgeCluster=35; AMCV_BD260C0F53C9733E0A490D45%40AdobeOrg=-408604571%7CMCIDTS%7C18417%7CMCMID%7C08323882302273719087648349596693384028%7CMCAID%7CNONE%7CMCOPTOUT-1591270700s%7CNONE%7CvVersion%7C4.6.0%7CMCAAMLH-1591868300%7C6%7CMCAAMB-1591868300%7Cj8Odv6LonN4r3an7LhD3WZrU1bUpAkFkkiY1ncBR96t2PTI; ps_auth=sess_start_time=2020-06-04T09:39:09+00:00&psn_ticket=&psn_token=51a2fb5f-02dd-400b-a2aa-55cfe990587f; ps_profile=ct=2020-06-04T09:39:09+00:00&avatar_url_large=https%3A%2F%2Fstatic-resource.np.community.playstation.net%2Favatar%2FWWS_A%2FUP90001209G03_BAEDE4B3D72B495E02D4_L.png&psnbeta=false&avatar_url_medium=https%3A%2F%2Fstatic-resource.np.community.playstation.net%2Favatar_m%2FWWS_A%2FUP90001209G03_F350D1CDDCBDE7930BD2_M.png&psplus=true&avatar_url_small=https%3A%2F%2Fstatic-resource.np.community.playstation.net%2Favatar_s%2FWWS_A%2FUP90001209G03_4E7B1FD9A94A93943B8C_S.png&aid=z83ydqg5mZNRkXh947FHdk34zxSA1Al6PHwizgE/geg=&online_id=denzoned; uh=c36a38b3a46326c5d923de20bf18552b2c38b29aeee2add712381395584e792c; pid_ps=a2b0ad054af9f196946cde05fad502f7; mbox=PC#97411ab27e1d47b6a02ae6c632c4fea0.35_0#1654508353|session#6ec1738f7ab543ea81f09b7175f04450#1591265357; euconsent=BO0cFVZO0d4ySASABAENDM-AAAAv6AAA; s_sq=%5B%5BB%5D%5D'
 }
 
-r = requests.request("GET", url, headers=headers, data = payload)
+response = requests.request("GET", url, headers=headers, data = payload)
 
 r = response.text.encode('utf8')
 soup = BeautifulSoup(r, "lxml")
 converter = bs2json()
 allgames = []
 with open('psnowgamelist3-1.csv', mode='w', encoding="utf-8", newline='') as gamelist_file:
-    fieldname = ['Game', 'Console', 'Until']
+    fieldname = ['Game', 'Console', 'Until', 'Europe', 'US']
     gamelist = csv.DictWriter(gamelist_file, fieldnames=fieldname)
     gamelist.writeheader()
     for s in soup.findAll('div', class_='copyblock parbase section'):
@@ -69,10 +69,9 @@ with open('psnowgamelist3-1.csv', mode='w', encoding="utf-8", newline='') as gam
                             game = [gametitle, console]
                             allgames.append(game)
     allgames.sort()
-    print(allgames)
     for i in allgames:
         gametitle = unicodedata.normalize("NFKD", i[0])
         if gametitle != " ":
             print(gametitle)
             console = i[1]
-            gamelist.writerow({'Game': gametitle,'Console': console, 'Until': 'TBD'})
+            gamelist.writerow({'Game': gametitle,'Console': console, 'Until': 'TBD', 'Europe': True, 'US': False})

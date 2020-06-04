@@ -12,8 +12,18 @@ Install them via pip to your Python environment.
 You can run the "PS Now Gameslist 2.ipynb" file with Jupyter Notebook.
 
 Otherwise run "app.py" with Python.
+```sh
+$ python app.py
+```
 
 In both cases a new "psnowgamelist.csv" file will be created with all the games.
+
+------------------------
+
+License
+----
+
+MIT
 
 Sony, Sony Entertainment Network, Playstation,  are trademarks or registered trademarks of Sony Corporation.
 

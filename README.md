@@ -1,6 +1,7 @@
 # PSNowGames
 Game List for PS Now Games
 
+https://github.com/aickletfraid/PSNowGames/blob/master/psnowgamelist3-2.csv
 
 This is a short script for fetching available games on the Playstation Now platform by Sony.
 It supports the region: USA and Europe

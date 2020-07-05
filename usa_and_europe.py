@@ -1,14 +1,10 @@
-import requests
-import json
-import html
-from html2json import collect
-from bs4 import BeautifulSoup
-from bs2json import bs2json
 import csv
-import ast
-import time
-import unicodedata
 import os
+import unicodedata
+
+import requests
+from bs2json import bs2json
+from bs4 import BeautifulSoup
 
 os.system('python app2.py')
 
@@ -71,8 +67,8 @@ with open('psnowgamelist3-1.csv', mode='r', encoding="utf-8") as europe_file:
         if included == 0:
             allgames.append([row[0], row[1], 'yes', 'no'])
 
-# for i in allgames:
-#     print(i)
+for i in allgames:
+    print(i)
 for l in usgames:
     if len(l) == 3:
         allgames.append([l[0], l[1], 'no', 'yes'])

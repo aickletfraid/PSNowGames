@@ -8,8 +8,13 @@ It supports the region: USA and Europe
 
 
 Necessary modules for the script: requests, html2json, bs4, bs2json, ast
+Install using below requirements file
 
-Install them via pip to your Python environment.
+```
+pip install -r requirements.txt
+
+```
+
 
 You can run the "Gamelist PS Now new.ipynb" first and then "US and Europe in one list.ipynb" to get the complete list with Jupyter Notebook.
 

@@ -1,4 +1,4 @@
 beautifulsoup4==4.9.1
 bs2json==0.0.1
 html2json==0.2.4.1
-requests==2.24.0
+requests==2.31.0
